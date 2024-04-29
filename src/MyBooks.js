@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import BookCard from './BookCard'; // Import BookCard component
 import "./css/myBooks.css"
 import { toast, ToastContainer } from 'react-toastify';
+import MyBookCard from './MyBookCard';
 
 const MyBooks = () => {
     const [myBooks, setMyBooks] = useState([]);
@@ -125,52 +126,52 @@ const MyBooks = () => {
                 )}
                 <div className="book-list">
                     {myBooks.map((book, index) => (
-                        <BookCard key={book.id} book={book} />
+                        <MyBookCard key={book.id} book={book} />
                     ))}
                 </div>
+                <br />
+                <button onClick={toggleBtn}>Upload</button>
             </main>
-            <button onClick={toggleBtn}>Upload</button>
+            {isUploadModalOpen && (
+                <div>
+                    <div className="modal-overlay"> {/* Overlay */}
+                        <div className="upload-modal">
+                            <div className="modal-content">
+                                <span className="close">&times;</span>
+                                <h2>Upload New Book</h2>
+                                <form onSubmit={handleSubmit}>
+                                    <input type="text" name="title" placeholder="Title" value={newBookData.title} onChange={handleInputChange} />
+                                    <input type="text" name="author" placeholder="Author" value={newBookData.author.fullName} onChange={handleAuthorChange} />
+                                    <input type="text" name="category" placeholder="Category" value={newBookData.category.name} onChange={handleCategoryChange} />
+                                    <input type="text" name="imgUrl" placeholder="Image URL" value={newBookData.imgUrl} onChange={handleInputChange} />
+                                    <div className="dropdown">
+                                        <select className="dropdown-select" name="author" value={newBookData.author} onChange={handleAuthorChange}>
+                                            <option value="">Select Author</option>
+                                            {authors.map((author) => (
+                                                <option className='dropdown-option' key={author.id} value={author.id}>{author.fullName}</option>
+                                            ))}
+                                        </select>
+                                        <select className="dropdown-select" name="category" value={newBookData.category} onChange={handleCategoryChange}>
+                                            <option value="">Select Category</option>
+                                            {categories.map((category) => (
+                                                <option key={category.id} value={category.id}>{category.name}</option>
+                                            ))}
+                                        </select>
+                                        <br />
+                                        <input type="text" name="description" placeholder="Description..." value={newBookData.description} onChange={handleInputChange} />
+                                        <button type="submit">Submit</button>
+                                        <button onClick={handleUploadModalClose}>Close</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
             <ToastContainer />
             <footer className="my-books-footer">
                 <p>&copy; 2024 UzbekReads. All rights reserved.</p>
             </footer>
-            {isUploadModalOpen && (
-                <>
-                    <div className="modal-overlay" onClick={handleUploadModalClose}></div> {/* Overlay */}
-                    <div className="upload-modal">
-                        <div className="modal-content">
-                            <span className="close" onClick={handleUploadModalClose}>&times;</span>
-                            <h2>Upload New Book</h2>
-                            <form onSubmit={handleSubmit}>
-                                <input type="text" name="title" placeholder="Title" value={newBookData.title} onChange={handleInputChange} />
-                                <input type="text" name="author" placeholder="Author" value={newBookData.author.fullName} onChange={handleAuthorChange} />
-                                <input type="text" name="category" placeholder="Category" value={newBookData.category.name} onChange={handleCategoryChange} />
-                                <input type="text" name="imgUrl" placeholder="Image URL" value={newBookData.imgUrl} onChange={handleInputChange} />
-                                {/* Other input fields */}
-                                <div className="dropdown">
-                                    <select className="dropdown-select" name="author" value={newBookData.author} onChange={handleAuthorChange}>
-                                        <option value="">Select Author</option>
-                                        {authors.map((author) => (
-                                            <option className='dropdown-option' key={author.id} value={author.id}>{author.fullName}</option>
-                                        ))}
-                                    </select>
-                                    <select className="dropdown-select" name="category" value={newBookData.category} onChange={handleCategoryChange}>
-                                        <option value="">Select Category</option>
-                                        {categories.map((category) => (
-                                            <option key={category.id} value={category.id}>{category.name}</option>
-                                        ))}
-                                    </select>
-                                    <br />
-                                    <input type="text" name="description" placeholder="Description..." value={newBookData.description} onChange={handleInputChange} />
-                                    <button type="submit">Submit</button>
-                                </div>
-
-                                {/* Other input fields */}
-                            </form>
-                        </div>
-                    </div>
-                </>
-            )}
         </div>
     );
 };

@@ -10,6 +10,8 @@ const Page = () => {
     const [page, setPage] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(0);
+    const [altTitle, setAltTitle] = useState("Loading...");
+    const [altAuthor, setAltAuthor] = useState("Loading...");
     const { id } = useParams();
 
     useEffect(() => {
@@ -22,6 +24,8 @@ const Page = () => {
             } catch (error) {
                 if (error.response && error.response.status === 404) {
                     toast.error('Page not found.');
+                    setTotalPages(0);
+                    setCurrentPage(0);
                 } else {
                     toast.error('Failed to fetch page.');
                 }
@@ -37,6 +41,8 @@ const Page = () => {
             setPage(response.data);
             setTotalPages(response.data.totalPages);
             setCurrentPage(response.data.pageNumber);
+            setAltAuthor("Not found!");
+            setAltTitle("Not found!");
         } catch (error) {
             if (error.response && error.response.status === 404) {
                 toast.error('No previous page available.');
@@ -66,10 +72,10 @@ const Page = () => {
             <Navbar />
             <div className="page-content">
             <h2 className="book-title">
-                <a href={`/book/${id}`}>{page ? page.bookTitle : "Loading..."}</a>
+                <a href={`/book/${id}`}>{page ? page.bookTitle : altTitle}</a>
             </h2>
             <h3 className="author">
-                <a href={`/author/${page ? page.authorId : null}`}>{page ? page.authorName : "Loading..."}</a>
+                <a href={`/author/${page ? page.authorId : null}`}>{page ? page.authorName : altAuthor}</a>
             </h3>
                 <div className="navigation">
                 {currentPage > 1 && (
