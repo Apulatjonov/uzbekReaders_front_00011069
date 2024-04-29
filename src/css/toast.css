@@ -1,0 +1,17 @@
+.custom-toast {
+    background-color: #ff5555; /* Red background */
+    color: #ffffff; /* White text color */
+    font-size: 16px; /* Font size */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow */
+    display: flex; /* Display inline */
+    align-items: center; /* Center align content */
+    justify-content: center; /* Center align content */
+    text-align: center; /* Center align text */
+  }
+
+  .custom-toast .Toastify__toast-body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }

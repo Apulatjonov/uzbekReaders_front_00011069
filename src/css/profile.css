@@ -1,0 +1,117 @@
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.profile-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.profile-container div {
+    margin-bottom: 15px;
+}
+
+.profile-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-container input[type="text"],
+.profile-container input[type="email"],
+.profile-container input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.profile-container h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.profile-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.profile-container button:hover {
+    background-color: #0056b3;
+}
+
+.profile-container button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.profile-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.profile-container .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-container .card-container > div {
+    display: flex;
+    align-items: center;
+}
+
+.profile-container .card-container input[type="text"] {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.profile-container .card-container button {
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+
+.profile-container .card-container button:hover {
+    background-color: #d9534f;
+}
+
+
+.cards-section {
+    margin-top: 20px;
+  }
+  
+  .card-list {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .card-item {
+    min-width: 200px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .card-item.selected {
+    background-color: #e0e0e0;
+}
+
+  .card-details p {
+    margin: 5px 0;
+  }
+  
+  .payment-section {
+    margin-top: 20px;
+  }

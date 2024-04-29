@@ -1,0 +1,210 @@
+.book-container {
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    z-index: 1000;
+}
+
+.book-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.book-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.book-container p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.book-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.book-container button:hover {
+    background-color: #0056b3;
+}
+
+.book-container h3 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.book-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.book-container ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.add-comment textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.add-comment button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-comment button:hover {
+    background-color: #0056b3;
+}
+
+.book-image {
+    width: 350px; /* Set width of the book image */
+    height: auto;
+    margin-right: 20px; /* Add margin to separate the image from details */
+}
+
+.book-details {
+    flex-grow: 0; /* Allow details to grow and take remaining space */
+    max-width: 80%;
+}
+
+.book-details p :hover {
+    text-decoration: none; /* Remove underline */
+    cursor: default;
+}
+
+.star-rating {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.star {
+    color: gold;
+}
+
+.comments-section {
+    margin-top: 20px;
+}
+
+.comments-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment-item {
+    text-align: left;
+}
+
+.comment-container{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f5f5f5; /* Light gray background*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #003366; /* Midnight blue text */
+    position: relative; /* Added position relative */
+}
+
+.comment-item strong {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.comment-item text {
+    font-size: 20px;
+}
+
+.description{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 40px;
+    max-width: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.sign-in-link {
+    font-size: 1.2rem;
+    color: #007bff; /* Blue color, you can adjust this to match your theme */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.sign-in-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Star rating styles */
+.star-rating {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.star {
+    color: #ccc; /* Default color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Hover effect for filled stars */
+.star.filled.hovered,
+.star.filled.selected {
+    color: gold;
+}
+
+/* Hover effect for empty stars */
+.star.empty.hovered,
+.star.empty.selected {
+    color: gold;
+}
+
+.delete-comment-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-comment-btn:hover {
+    color: grey;
+}
+
+.char-counter {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #888;
+}

@@ -1,0 +1,64 @@
+.library-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.book-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.book-card h4 {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.book-card p {
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
+.book-card .rating {
+    display: flex;
+    align-items: center;
+}
+
+.book-card .rating span {
+    color: #ffc107;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.horizontal-scroll > * {
+    flex: 0 0 auto;
+}

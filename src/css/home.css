@@ -1,0 +1,216 @@
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.home-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.home-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.home-main .featured-books {
+    margin-bottom: 40px;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book-item h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.book-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.home-footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Star rating styles */
+.star-rating {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.star {
+    color: gold;
+}
+
+/* Hover effect for book pictures */
+.book-item img {
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.book-item :hover {
+    transform: scale(1.1); /* Scale up the image slightly on hover */
+    cursor: pointer;
+}
+
+.book-picture{
+    padding: 20px;
+}
+
+
+
+
+.category-books {
+    margin-bottom: 40px;
+}
+
+.category-list {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.category-item {
+    display: inline-block;
+    margin: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    flex-shrink: 0;
+    z-index: 1003;
+    overflow: visible;
+    position: relative;
+}
+
+.category-item:last-child {
+    margin-right: 0;
+}
+
+.category-item img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.category-item h4 {
+    margin-top: 10px;
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.category-item:hover {
+    transform: scale(1.02);
+    z-index: 1004;
+    transition: transform 0.5s ease;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* Horizontal scroll */
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Horizontal scroll */
+/* Horizontal scroll */
+.horizontal-scroll {
+    position: relative;
+    overflow-x: scroll;
+    white-space: nowrap;
+    overflow-y: hidden;
+    display: flex;
+    gap: 20px;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
+}
+
+/* Add shadows using pseudo-elements */
+/* .horizontal-scroll::before,
+.horizontal-scroll::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.horizontal-scroll::before {
+    left: 0;
+    box-shadow: 20px 0 20px -15px rgba(0, 0, 0, 0.5);
+}
+
+.horizontal-scroll::after {
+    right: 0;
+    box-shadow: -20px 0 20px -15px rgba(0, 0, 0, 0.5);
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+} */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}

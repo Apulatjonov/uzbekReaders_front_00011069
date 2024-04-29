@@ -1,0 +1,58 @@
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.book-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    user-select: none; /* Make the book title unselectable */
+    cursor: default; /* Remove pointer cursor */
+    text-decoration: none; /* Remove underline effect */
+}
+
+.author {
+    font-style: italic;
+    margin-bottom: 20px;
+    user-select: none; /* Make the author unselectable */
+    cursor: default; /* Remove pointer cursor */
+    text-decoration: none; /* Remove underline effect */
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+.page-info {
+    font-size: 16px;
+}
+
+.page-content {
+    line-height: 1.5;
+}
+
+.page-content p {
+    user-select: none; /* Make the page content unselectable */
+    cursor: default; /* Remove pointer cursor */
+    text-decoration: none; /* Remove underline effect */
+}
+
+.page-footer {
+    margin-top: 50px;
+    text-align: center;
+}
